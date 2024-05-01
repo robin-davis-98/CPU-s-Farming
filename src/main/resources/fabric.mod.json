@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "cpufarming",
+	"version": "${version}",
+	"name": "cpuFarming",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/cpufarming/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.robindavis.farming.CpuFarming"
+		],
+		"client": [
+			"dev.robindavis.farming.CpuFarmingClient"
+		],
+		"fabric-datagen": [
+			"dev.robindavis.farming.CpuFarmingDataGenerator"
+		]
+	},
+	"mixins": [
+		"cpufarming.mixins.json",
+		{
+			"config": "cpufarming.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
